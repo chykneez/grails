@@ -90,44 +90,45 @@ const shopData = [
       },
       {
         id: 12,
-        name: 'Black Converse',
-        imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
-        price: 110
-      },
-      {
-        id: 13,
         name: 'Nike Air Force 1 Low "Travis Scott"',
         imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Nike%2Ftravis-scott-air-force.webp?alt=media&token=fc2852cb-37af-4eb1-8838-70f478007261',
         price: 150
       },
       {
-        id: 14,
+        id: 13,
         name: 'Nike Air Max 1/97 "Sean Wotherspoon"',
         imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Nike%2Fsean-wotherspoon.webp?alt=media&token=a6d6c815-758f-47b3-a3ad-a546157885ae',
         price: 160
       },
       {
-        id: 15,
+        id: 14,
         name: 'Nike Sacai LD Waffle (Blue)',
         imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Nike%2Fnike-sacai.webp?alt=media&token=f8c8ca64-0d75-46cc-b715-4986b1c11e8a',
         price: 160
       },
       {
-        id: 16,
+        id: 15,
         name: 'Nike Kobe 6 "Grinch" (2010)',
         imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Nike%2Fkobe-grinch.webp?alt=media&token=9d49e81d-b4c2-431f-a892-e2306c2dbe86',
         price: 130
       },
       {
-        id: 17,
+        id: 16,
         name: 'Nike Kobe 6 "Prelude All Star MVP"',
         imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Nike%2Fkobe-prelude.webp?alt=media&token=0ee5521f-eb7e-4036-8a08-c46b55ccd524',
         price: 200
+      },
+      {
+        id: 17,
+        name: 'Nike Kobe 8 "What The Kobe"',
+        imageUrl:
+          'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Nike%2Fwhat-the-kobe.webp?alt=media&token=4408317d-3a24-4e91-8b92-bd21b06b1f34',
+        price: 140
       }
     ]
   },
