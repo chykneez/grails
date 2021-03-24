@@ -4,18 +4,13 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import HomePage from './Pages/HomePage/HomePage';
-
-const jordan = () => (
-  <div>
-    <h1>Air Jordan</h1>
-  </div>
-);
+import ShopPage from './Pages/ShopPage/ShopPage';
 
 const App = () => (
   <div>
     <Switch>
       <Route exact path='/' component={HomePage} />
-      <Route path='/shop' component={jordan} />
+      <Route path='/shop' component={ShopPage} />
     </Switch>
   </div>
 );
