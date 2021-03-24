@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './SignUp.scss';
+
 import InputForm from '../InputForm/InputForm';
 import CustomButton from '../CustomButton/CustomButton';
 
