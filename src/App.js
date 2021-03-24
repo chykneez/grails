@@ -8,15 +8,42 @@ import HomePage from './Pages/HomePage/HomePage';
 import ShopPage from './Pages/ShopPage/ShopPage';
 import SigningPage from './Pages/SigningPage/SigningPage';
 
-const App = () => (
-  <div>
-    <Header />
-    <Switch>
-      <Route exact path='/' component={HomePage} />
-      <Route path='/shop' component={ShopPage} />
-      <Route path='/signin' component={SigningPage} />
-    </Switch>
-  </div>
-);
+import { auth } from './firebase/utils';
+
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: null
+    };
+  }
+
+  unsubscribeFromAuth = null;
+
+  componentDidMount() {
+    unsubscribeFromAuth = auth.onAuthStateChanged(currentUser => {
+      this.setState({ currentUser });
+      console.log(currentUser);
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route path='/signin' component={SigningPage} />
+        </Switch>
+      </div>
+    );
+  }
+}
 
 export default App;
