@@ -1,5 +1,11 @@
 import React from 'react';
 
-const SigningPage = () => <div className='signing-page'>SIGNING PAGE</div>;
+import SignIn from '../../Components/SignIn/SignIn';
+
+const SigningPage = () => (
+  <div className='signing-page'>
+    <SignIn />
+  </div>
+);
 
 export default SigningPage;
