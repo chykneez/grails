@@ -32,13 +32,15 @@ class Directory extends React.Component {
           id: 4,
           title: 'Off-White',
           imageUrl:
-            'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Directory%2FOff-White-background.png?alt=media&token=4aa27459-13bd-4e3a-bac7-54ad1f0344e7'
+            'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Directory%2FOff-White-background.png?alt=media&token=4aa27459-13bd-4e3a-bac7-54ad1f0344e7',
+          size: 'large'
         },
         {
           id: 5,
           title: 'Yeezy',
           imageUrl:
-            'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Directory%2FYeezy-background.jpeg?alt=media&token=95b5d663-8a35-46a6-9f16-963556d31df2'
+            'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Directory%2FYeezy-background.jpeg?alt=media&token=95b5d663-8a35-46a6-9f16-963556d31df2',
+          size: 'large'
         }
       ]
     };
@@ -47,8 +49,13 @@ class Directory extends React.Component {
   render() {
     return (
       <div className='directory'>
-        {this.state.sections.map(({ id, title, imageUrl }) => (
-          <DirectoryItem key={id} title={title} imageUrl={imageUrl} />
+        {this.state.sections.map(({ id, title, imageUrl, size }) => (
+          <DirectoryItem
+            key={id}
+            title={title}
+            imageUrl={imageUrl}
+            size={size}
+          />
         ))}
       </div>
     );
