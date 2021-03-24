@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { ReactComponent as Logo } from '../../assets/logo.svg';
+
 const Header = () => (
   <div className='header'>
     <Link className='logo-container' to='/'>
-      <div className='logo' />
+      <Logo className='logo' />
     </Link>
 
     <div className='options'>
