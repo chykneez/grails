@@ -5,7 +5,7 @@ const initialState = {
       title: 'Air Jordan',
       imageUrl:
         'https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Directory%2FJordan-background.jpeg?alt=media&token=12ea0f29-2404-4e8b-97b0-ec6c7d3616a6',
-      linkUrl: 'shop/jordan'
+      linkUrl: 'shop/air jordan'
     },
     {
       id: 2,
