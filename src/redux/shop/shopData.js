@@ -1,5 +1,5 @@
-const shopData = [
-  {
+const shopData = {
+  'air jordan': {
     id: 1,
     title: 'Air Jordan',
     routeName: 'air jordan',
@@ -69,7 +69,7 @@ const shopData = [
       }
     ]
   },
-  {
+  nike: {
     id: 2,
     title: 'Nike',
     routeName: 'nike',
@@ -132,7 +132,7 @@ const shopData = [
       }
     ]
   },
-  {
+  adidas: {
     id: 3,
     title: 'Adidas',
     routeName: 'adidas',
@@ -174,7 +174,7 @@ const shopData = [
       }
     ]
   },
-  {
+  'off-white': {
     id: 4,
     title: 'Off-White',
     routeName: 'off-white',
@@ -216,7 +216,7 @@ const shopData = [
       }
     ]
   },
-  {
+  yeezy: {
     id: 5,
     title: 'Yeezy',
     routeName: 'yeezy',
@@ -279,6 +279,6 @@ const shopData = [
       }
     ]
   }
-];
+};
 
 export default shopData;
