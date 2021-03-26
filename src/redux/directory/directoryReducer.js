@@ -46,3 +46,5 @@ const directoryReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default directoryReducer;
