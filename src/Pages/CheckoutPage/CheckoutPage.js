@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect';
 import './CheckoutPage.scss';
 
 import CheckoutItem from '../../Components/CheckoutItem/CheckoutItem';
+import StripeButton from '../../Components/StripeButton/StripeButton';
 
 import {
   selectCartItems,
@@ -37,6 +38,8 @@ const CheckoutPage = ({ cartItems, total }) => (
     <div className='total'>
       <span>Total: ${total}</span>
     </div>
+
+    <StripeButton price={total} />
   </div>
 );
 
