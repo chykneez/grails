@@ -19,7 +19,7 @@ const DirectoryItem = ({ title, imageUrl, size, history, match, linkUrl }) => (
       imageUrl={imageUrl}
     />
 
-    <ContentContainer>
+    <ContentContainer className='content'>
       <ContentTitle>{title.toUpperCase()}</ContentTitle>
       <ContentSubtitle>SHOP NOW</ContentSubtitle>
     </ContentContainer>
