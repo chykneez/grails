@@ -1,23 +1,29 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import './DirectoryItem.scss';
+import {
+  DirectoryItemContainer,
+  BackgroundImageContainer,
+  ContentContainer,
+  ContentTitle,
+  ContentSubtitle
+} from './DirectoryItemStyles';
 
 const DirectoryItem = ({ title, imageUrl, size, history, match, linkUrl }) => (
-  <div
-    className={`${size} directory-item`}
+  <DirectoryItemContainer
+    size={size}
     onClick={() => history.push(`${match.url}${linkUrl}`)}
   >
-    <div
+    <BackgroundImageContainer
       className='background-image'
-      style={{ backgroundImage: `url(${imageUrl})` }}
+      imageUrl={imageUrl}
     />
 
-    <div className='content'>
-      <h1 className='title'>{title.toUpperCase()}</h1>
-      <span className='subtitle'>SHOP NOW</span>
-    </div>
-  </div>
+    <ContentContainer>
+      <ContentTitle>{title.toUpperCase()}</ContentTitle>
+      <ContentSubtitle>SHOP NOW</ContentSubtitle>
+    </ContentContainer>
+  </DirectoryItemContainer>
 );
 
 export default withRouter(DirectoryItem);
