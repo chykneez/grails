@@ -2,18 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import './Directory.scss';
+import { DirectoryContainer } from './DirectoryStyles';
 
 import DirectoryItem from '../DirectoryItem/DirectoryItem';
 
 import { selectDirectorySections } from '../../redux/directory/directorySelectors';
 
 const Directory = ({ sections }) => (
-  <div className='directory'>
+  <DirectoryContainer>
     {sections.map(({ id, ...sectionProps }) => (
       <DirectoryItem key={id} {...sectionProps} />
     ))}
-  </div>
+  </DirectoryContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
