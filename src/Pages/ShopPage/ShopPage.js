@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import CollectionOverview from '../../Components/CollectionOverview/CollectionOverview';
 import CollectionPage from '../CollectionPage/CollectionPage';
+import WithLoader from '../../Components/WithLoader/WithLoader';
 
 import {
   firestore,
@@ -12,7 +13,11 @@ import {
 
 import { updateCollections } from '../../redux/shop/shopActions';
 
+const CollectionOverviewWithLoader = WithLoader(CollectionOverview);
+const CollectionPageWithLoader = WithLoader(CollectionPage);
+
 class ShopPage extends React.Component {
+  state = { loading: true };
   unsubscribeFromSnapshot = null;
 
   componentDidMount() {
@@ -22,18 +27,28 @@ class ShopPage extends React.Component {
     collectionRef.onSnapshot(async snapshot => {
       const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
       updateCollections(collectionsMap);
+      this.setState({ loading: false });
     });
   }
 
   render() {
     const { match } = this.props;
+    const { loading } = this.state;
 
     return (
       <div>
-        <Route exact path={`${match.path}`} component={CollectionOverview} />
+        <Route
+          exact
+          path={`${match.path}`}
+          render={props => (
+            <CollectionOverviewWithLoader isLoading={loading} {...props} />
+          )}
+        />
         <Route
           path={`${match.path}/:collectionId`}
-          component={CollectionPage}
+          render={props => (
+            <CollectionPageWithLoader isLoading={loading} {...props} />
+          )}
         />
       </div>
     );
