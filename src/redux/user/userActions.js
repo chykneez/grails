@@ -6,7 +6,10 @@ import {
   CHECK_USER_SESSION,
   SIGN_OUT_START,
   SIGN_OUT_SUCCESS,
-  SIGN_OUT_FAIL
+  SIGN_OUT_FAIL,
+  SIGN_UP_START,
+  SIGN_UP_SUCCESS,
+  SIGN_UP_FAIL
 } from './userConstants';
 
 export const googleSignInStart = () => ({
@@ -42,5 +45,20 @@ export const signOutSuccess = () => ({
 
 export const signOutFail = error => ({
   type: SIGN_OUT_FAIL,
+  payload: error
+});
+
+export const signUpStart = credentials => ({
+  type: SIGN_UP_START,
+  payload: credentials
+});
+
+export const signUpSuccess = ({ user, data }) => ({
+  type: SIGN_UP_SUCCESS,
+  payload: { user, data }
+});
+
+export const signUpFail = error => ({
+  type: SIGN_UP_FAIL,
   payload: error
 });

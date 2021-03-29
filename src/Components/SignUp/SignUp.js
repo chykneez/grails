@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { SignUpContainer, SignUpTitle } from './SignUpStyles';
 
 import InputForm from '../InputForm/InputForm';
 import CustomButton from '../CustomButton/CustomButton';
 
-import { auth, createUserDocument } from '../../firebase/utils';
+import { signUpStart } from '../../redux/user/userActions';
 
 class SignUp extends React.Component {
   constructor() {
@@ -23,6 +24,7 @@ class SignUp extends React.Component {
     event.preventDefault();
 
     const { displayName, email, password, confirmPassword } = this.state;
+    const { signUpStart } = this.props;
 
     // Check to see if the user entered the same password twice.
     if (password !== confirmPassword) {
@@ -30,23 +32,7 @@ class SignUp extends React.Component {
       return;
     }
 
-    try {
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
-
-      await createUserDocument(user, { displayName });
-
-      this.setState({
-        displayName: '',
-        email: '',
-        password: '',
-        confirmPassword: ''
-      });
-    } catch (error) {
-      console.error(error);
-    }
+    signUpStart({ displayName, email, password });
   };
 
   handleChange = event => {
@@ -103,4 +89,8 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+const mapDispatchToProps = dispatch => ({
+  signUpStart: credentials => dispatch(signUpStart(credentials))
+});
+
+export default connect(null, mapDispatchToProps)(SignUp);
