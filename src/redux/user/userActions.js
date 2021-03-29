@@ -1,8 +1,9 @@
 import {
+  GOOGLE_SIGN_IN_START,
   EMAIL_SIGN_IN_START,
   SIGN_IN_FAIL,
-  GOOGLE_SIGN_IN_START,
-  SIGN_IN_SUCCESS
+  SIGN_IN_SUCCESS,
+  CHECK_USER_SESSION
 } from './userConstants';
 
 export const googleSignInStart = () => ({
@@ -22,4 +23,8 @@ export const signInSuccess = user => ({
 export const signInFail = error => ({
   type: SIGN_IN_FAIL,
   payload: error
+});
+
+export const checkUserSession = () => ({
+  type: CHECK_USER_SESSION
 });
