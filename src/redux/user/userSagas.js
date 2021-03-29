@@ -71,19 +71,19 @@ function* signOut() {
   }
 }
 
-export function* onGoogleSignInStart() {
+function* onGoogleSignInStart() {
   yield takeLatest(GOOGLE_SIGN_IN_START, signInWithGoogle);
 }
 
-export function* onEmailSignInStart() {
+function* onEmailSignInStart() {
   yield takeLatest(EMAIL_SIGN_IN_START, signInWithEmail);
 }
 
-export function* onCheckUserSession() {
+function* onCheckUserSession() {
   yield takeLatest(CHECK_USER_SESSION, isUserAuthenticated);
 }
 
-export function* onSignOutStart() {
+function* onSignOutStart() {
   yield takeLatest(SIGN_OUT_START, signOut);
 }
 
