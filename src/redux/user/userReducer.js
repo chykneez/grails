@@ -1,4 +1,9 @@
-import { SIGN_IN_FAIL, SIGN_IN_SUCCESS } from './userConstants';
+import {
+  SIGN_IN_FAIL,
+  SIGN_IN_SUCCESS,
+  SIGN_OUT_FAIL,
+  SIGN_OUT_SUCCESS
+} from './userConstants';
 
 const initialState = {
   currentUser: null,
@@ -13,7 +18,14 @@ const userReducer = (state = initialState, action) => {
         currentUser: action.payload,
         error: null
       };
+    case SIGN_OUT_SUCCESS:
+      return {
+        ...state,
+        currentUser: null,
+        error: null
+      };
     case SIGN_IN_FAIL:
+    case SIGN_OUT_FAIL:
       return {
         ...state,
         error: action.payload
