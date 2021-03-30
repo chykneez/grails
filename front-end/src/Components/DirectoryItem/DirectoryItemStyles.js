@@ -33,7 +33,8 @@ export const DirectoryItemContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    height: 150px;
+    height: 200px;
+    width: 100%;
   }
 `;
 
@@ -56,6 +57,11 @@ export const ContentContainer = styled.div`
   background-color: white;
   opacity: 0.6;
   position: absolute;
+
+  @media screen and (max-width: 800px) {
+    width: 45%;
+    height: 12%;
+  }
 `;
 
 export const ContentTitle = styled.div`
