@@ -1,11 +1,22 @@
-# Grails
+<h1 align="center">
+  <br>
+  <a href="http://patrick-grails.herokuapp.com/">
+    <img 
+      src="https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Demo%2Flogo.png?alt=media&token=3f74a371-ff65-4eeb-abda-e0375b9a4402" 
+      alt="Grails" width="200"
+    />
+  </a>
+  <br>
+  Grails
+  <br>
+</h1>
 
-"Grail": Something that is being earnestly pursued or sought after.  
+<h4 align="center">Grail: something that is being earnestly pursued or sought after. </h4> 
   
-Grails is an e-commerce web application that displays my personal sneaker grails.  
+<p align="center">Grails is an e-commerce web application that displays my personal sneaker grails.</p>
 
 ## Deployed Version
-You can check out the live demo here: http://patrick-grails.herokuapp.com/  
+Check it out here 👉 : http://patrick-grails.herokuapp.com/  
 
 ## Demonstration
 ### Home Page:  
@@ -24,18 +35,16 @@ You can check out the live demo here: http://patrick-grails.herokuapp.com/
 ![](https://firebasestorage.googleapis.com/v0/b/grails-42150.appspot.com/o/Demo%2FsigningPage.gif?alt=media&token=a727f8b0-4816-4d39-8f37-89b8640ed188)
 
 ## Technologies Used
-#### Front-end
-  - React  
-#### Styling  
-  - Styled Components
-  - Node Sass
-#### Back-end
-  - Node.js
-  - Express
-#### Database
-  - Firebase
-#### State Management
-  - Redux
-  - Redux Thunk
-  - Redux Saga
-  - Reselect
+  - [React](https://reactjs.org/) - JavaScript UI Library
+  - [React Router Dom](https://reactrouter.com/web/guides/quick-start) - Navigational Components
+  - [Styled Components](https://styled-components.com/) - Styling Library
+  - [Node Sass](https://www.npmjs.com/package/node-sass) - Easier Styling Syntax
+  - [Axios](https://www.npmjs.com/package/axios) - Connecting Front-End To Back-End
+  - [Node.js](https://nodejs.org/en/) - JavaScript Runtime Environment
+  - [Express](https://expressjs.com/) - Web Framework
+  - [Firebase](https://firebase.google.com/) - User Authentication and Database
+  - [Redux](https://redux.js.org/) - State Management
+  - [Redux Persist](https://www.npmjs.com/package/redux-persist) - Persist Redux Store
+  - [Redux Saga](https://redux-saga.js.org/) - Side Effects For Redux
+  - [Reselect](https://www.npmjs.com/package/reselect) - Memoize Selectors
+  - [Stripe](https://stripe.com/) - Online Payment API
