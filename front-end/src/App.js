@@ -6,6 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import { GlobalStyle } from './AppStyles';
 
 import Header from './Components/Header/Header';
+import Loader from './Components/Loader/Loader';
 
 import { selectCurrentUser } from './redux/user/userSelectors';
 import { checkUserSession } from './redux/user/userActions';
@@ -25,7 +26,7 @@ const App = ({ checkUserSession, currentUser }) => {
       <GlobalStyle />
       <Header />
       <Switch>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
           <Route exact path='/checkout' component={CheckoutPage} />

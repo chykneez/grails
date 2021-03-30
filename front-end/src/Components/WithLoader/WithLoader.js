@@ -1,15 +1,9 @@
 import React from 'react';
 
-import { LoaderOverlay, LoaderContainer } from './WithLoaderStyles';
+import Loader from '../Loader/Loader';
 
 const WithLoader = WrappedComponent => ({ isLoading, ...otherProps }) => {
-  return isLoading ? (
-    <LoaderOverlay>
-      <LoaderContainer />
-    </LoaderOverlay>
-  ) : (
-    <WrappedComponent {...otherProps} />
-  );
+  return isLoading ? <Loader /> : <WrappedComponent {...otherProps} />;
 };
 
 export default WithLoader;
